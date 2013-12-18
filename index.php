@@ -1,29 +1,24 @@
 <?php
 
-class Factorial
-{
-
-    public function getFactorial ($num)
+    public function getFactorial($num)
     {
-        $i = $num;
-        if ($num == 0) {
-            $num = 1;
-        }
-        if ($num < 0) {
-            return $this->error();
-        } else {
-            for ($i; $i > 0; $i --) {
-                $num = $num * $i;
+        try {
+            if ($num && $num > 0) {
+                if ($num === 0) {
+                    $overall = 1;
+                } else {
+                    $overall = $num;
+                }
+                for ($i = $num; $i > 0; $i --) {
+                    $overall *= $i;
+                }
+                return $overall;
             }
+             else {
+                throw new Exception('неверно');
+            }
+        } catch (Exception $e) {
+            echo $e->getMessage();
         }
-        return $num;
-    }
-
-    public function error ()
-    {
-        $errtxt = "число меньше 0";
-        return $errtxt;
     }
 }
-$f = new Factorial();
-echo $f->getFactorial(- 1);
