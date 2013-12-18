@@ -1,5 +1,4 @@
-<?php 
-public function getFactorial($num)
+public function getFactorial($num = false)
 {
     try {
         if ($num && $num > 0) {
@@ -15,7 +14,7 @@ public function getFactorial($num)
             return $overall;
         }
         else {
-            throw new Exception('неверно');
+            throw new Exception('wrong way');
         }
     }
     catch (Exception $e) {
