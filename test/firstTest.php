@@ -1,7 +1,7 @@
 <?php
 // require_once 'factorial.php';
 
-namespace proj/test;
+namespace proj\test;
 
 use proj\Factorial as myClass;
 
