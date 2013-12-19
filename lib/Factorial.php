@@ -1,5 +1,5 @@
 <?php
-namespace proj;
+namespace project;
 
 class Factorial
 {
