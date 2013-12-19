@@ -1,6 +1,6 @@
 <?php 
 
-namespace phpunit/test;
+namespace phpunit\test;
 
 class FactorialTest extends \PHPUnit_Framework_TestCase
 {
