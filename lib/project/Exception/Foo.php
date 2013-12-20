@@ -1,9 +1,6 @@
 <?php 
-namespace project\test\Exception;
-use project\Foo as Foo;
+namespace project\Exception;
 
-class Foo extends Exception {
-    public function __construct() {
-       echo 33333333333333;
-    }
+class Foo extends \Exception {
+    
 }

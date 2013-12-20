@@ -8,7 +8,7 @@ class Factorial
     {
         $num = intval($num);
         if ($num < 0) {
-            throw new Exception('wrongWay');
+            throw new Exception\Foo('wrongWay');
         }
         if ($num === 0) {
             return 1;

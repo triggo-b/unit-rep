@@ -20,29 +20,9 @@ class FactorialTest extends \PHPUnit_Framework_TestCase
     /*--------------------------------------------------------*/
     public function testException()
     {
-        $this->setExpectedException('Foo');
+        $this->setExpectedException('project\Exception\Foo');
+        $my = new myClass;
+        $my->getFactorial(-1);
+        
     }
-    public function testExceptionHasRightMessage()
-    {
-        $this->setExpectedException(
-                'Foo', 'wrongWay'
-        );
-        throw new Foo('Brrrrr', 10);
-    }
-    
-    /*--------------------------------------------------------*/
-    
-
-//     public function testException() {
-//         try {
-//             $my = new myClass;
-//             $my->getFactorial(6) == 120;
-//         }
-//          catch (myException $e) {
-//             echo "not working";
-//             $e = new myException('big error!!');
-//             echo "Details: " . $e->getMessage();
-//         }   
-//     }
-
 }
